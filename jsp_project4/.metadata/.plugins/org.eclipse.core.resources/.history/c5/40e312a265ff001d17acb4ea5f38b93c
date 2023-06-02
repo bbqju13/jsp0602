@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글수정</title>
+</head>
+<body>
+	<form action="/tcl/edit" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="tno" value="${tvo.tno }">
+		제목 : <input type="text" name="title" value="${tvo.title }"> <br> <br> <hr>
+		작성자 : <input type="text" name="writer" value="${tvo.writer }"> <br> <br> <hr>
+		내용 : <textarea rows="5" cols="30" name="content">${tvo.content }</textarea> <br> <br> <hr>
+		등록일 : ${tvo.reg_date } <br> <br> <hr>
+		이미지 파일 : <img alt="XXX" src="/_upload/th_${tvo.img_file }"> <br> <br> <hr>
+		<input type="hidden" name="img_file" value="${tvo.img_file }">
+		<input type="file" name="new_file"> <br> <br> <hr>
+			<button type="submit">완료</button>
+	</form>
+	<a href="/tcl/remove?tno=${tvo.tno }"> <button type="button">삭제</button> </a>
+</body>
+</html>

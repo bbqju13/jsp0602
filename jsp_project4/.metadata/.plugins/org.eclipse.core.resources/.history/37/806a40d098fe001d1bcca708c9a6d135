@@ -1,0 +1,9 @@
+package repository;
+
+import domain.UserVO;
+
+public interface UserDAO {
+
+	int insert(UserVO uvo);
+
+}

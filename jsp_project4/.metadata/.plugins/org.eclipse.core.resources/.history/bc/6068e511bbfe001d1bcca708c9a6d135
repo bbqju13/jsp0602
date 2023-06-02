@@ -1,0 +1,20 @@
+package service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.TablesVO;
+
+public class TableServiceImpl implements TableService {
+	private Logger log = LoggerFactory.getLogger(TableServiceImpl.class);
+	private TableDAO tdao;
+	public TableServiceImple() {
+		tdao = new TableDAOImpl();
+	}
+	@Override
+	public int insert(TablesVO tvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

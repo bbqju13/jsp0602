@@ -1,0 +1,33 @@
+package handler;
+
+import java.io.File;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class FileHandler {
+	private static Logger log = LoggerFactory.getLogger(FileHandler.class);
+	
+	public int deleteFile(String imgFileName, String savePath) {
+		boolean isDel = false;
+		log.info(" >>>>> deleteFile 메서드 >>>>> : " );
+		log.info(" >>>>> imgFileName >>>>> : " + imgFileName);
+		
+		File fileDir = new File(savePath);
+		File removeFile = new File(fileDir+File.separator+imgFileName);
+		File removethFile = new File(fileDir+File.separator+"th_"+imgFileName);
+		
+		if(removeFile.exists() || removethFile.exists()) {
+			isDel = removeFile.delete();
+			log.info(" >>>>> removeFile >>>>> : " + (isDel ? "성공" : "실패"));
+			
+			if(isDel) {
+				isDel = removethFile.delete();
+				log.info(" >>>>> removethFile >>>>> : " + (isDel ? "성공" : "실패"));
+			}
+		}
+		log.info(" >>>>> FileHandler remove Ok >>>>> : ");
+		return isDel ? 1:0;
+	}
+
+}

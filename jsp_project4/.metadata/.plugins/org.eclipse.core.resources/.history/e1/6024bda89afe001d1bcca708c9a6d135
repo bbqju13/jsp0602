@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+</head>
+<body>
+	<form action="/ucl/login_auth" method="post">
+		아이디 : <input type="text" name="id" placeholder="아이디"> <br> <br> <hr>
+		비밀번호 : <input type="text" name="pw" placeholder="비밀번호"> <br> <br> <hr>
+		<button type="submit">로그인</button>
+	</form>
+	<c:if test="${ses.id ne null }">
+		${ses.id } 님이 로그인 하였습니다. <br> <br> <hr>
+		${ses.id } 님은 ${ses.age } 세 입니다. <br> <br> <hr>
+		계정 생성일 : ${ses.reg_date } <br> <br> <hr>
+		마지막 접속일 : ${ses.last_log }
+	</c:if>
+</body>
+</html>

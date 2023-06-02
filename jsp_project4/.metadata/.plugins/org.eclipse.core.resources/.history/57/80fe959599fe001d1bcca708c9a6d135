@@ -1,0 +1,11 @@
+package service;
+
+import domain.UserVO;
+
+public interface UserService {
+
+	int register(UserVO uvo);
+
+	UserVO login(UserVO uvo2);
+
+}

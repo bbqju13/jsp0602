@@ -1,0 +1,17 @@
+package repository;
+
+import java.util.List;
+
+import domain.CommVO;
+
+public interface CommDAO {
+
+	int insert(CommVO cvo);
+
+	List<CommVO> getList(int tno);
+
+	int remove(int cno);
+
+	int modify(CommVO cvo);
+
+}

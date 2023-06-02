@@ -1,0 +1,13 @@
+package service;
+
+import domain.UserVO;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public int register(UserVO uvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

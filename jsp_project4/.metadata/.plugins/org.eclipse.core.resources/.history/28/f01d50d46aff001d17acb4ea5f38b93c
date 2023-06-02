@@ -1,0 +1,13 @@
+package domain;
+
+public class PaginVO {
+	private int pageNo;
+	private int qty;
+	private String type;
+	private String keyword;
+	
+	public PaginVO() {
+		this(1, 10);
+	}
+
+}

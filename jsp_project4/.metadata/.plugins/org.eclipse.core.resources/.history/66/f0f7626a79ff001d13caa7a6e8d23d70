@@ -1,0 +1,50 @@
+package service;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.PagingVO;
+import domain.TablesVO;
+import repository.TableDAO;
+import repository.TableDAOImpl;
+
+public class TableServiceImpl implements TableService {
+	private Logger log = LoggerFactory.getLogger(TableServiceImpl.class);
+	private TableDAO tdao;
+	public TableServiceImpl() {
+		tdao = new TableDAOImpl();
+	}
+	@Override
+	public int insert(TablesVO tvo) {
+		// TODO Auto-generated method stub
+		log.info(" >>>>> insert service >>>>> : ");
+		return tdao.insert(tvo);
+	}
+	@Override
+	public List<TablesVO> list() {
+		// TODO Auto-generated method stub
+		log.info(" >>>>> list service >>>>> : ");
+		return tdao.selectList();
+	}
+	@Override
+	public int getTotal(PagingVO pgvo) {
+		// TODO Auto-generated method stub
+		log.info(" >>>>> totCnt service >>>>> : ");
+		return tdao.totCnt(pgvo);
+	}
+	@Override
+	public List<TablesVO> getPageList(PagingVO pgvo) {
+		// TODO Auto-generated method stub
+		log.info(" >>>>> PageList service >>>>> : ");
+		return tdao.pageList(pgvo);
+	}
+	@Override
+	public TablesVO get(int tno) {
+		// TODO Auto-generated method stub
+		log.info(" >>>>> get service >>>>> : ");
+		return tdao.selectOne(tno);
+	}
+
+}

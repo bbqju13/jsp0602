@@ -1,0 +1,20 @@
+package repository;
+
+import org.apache.ibatis.session.SqlSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.CommVO;
+
+public class CommContorllerDAOImpl implements CommDAO {
+		private Logger log = LoggerFactory.getLogger(CommContorllerDAOImpl.class);
+		private SqlSession sql;
+		private String NS = "CommMapper.";
+
+	@Override
+	public int insert(CommVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,21 @@
+package repository;
+
+import java.util.List;
+
+import domain.UserVO;
+
+public interface UserDAO {
+
+	int insert(UserVO uvo);
+
+	UserVO selectOne(UserVO uvo2);
+
+	int lastLogout(String id2);
+
+	int modify(UserVO uvo2);
+
+	int remove(String rid);
+
+	List<UserVO> selectList();
+
+}

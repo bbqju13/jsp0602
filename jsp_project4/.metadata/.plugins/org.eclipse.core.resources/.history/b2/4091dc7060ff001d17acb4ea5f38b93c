@@ -1,0 +1,7 @@
+async function postCommToServer(cmtData){
+	try{
+		
+	}catch(err){
+		console.log(err);
+	}
+}

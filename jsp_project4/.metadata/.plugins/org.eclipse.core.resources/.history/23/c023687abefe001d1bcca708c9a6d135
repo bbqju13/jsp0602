@@ -1,0 +1,9 @@
+package repository;
+
+import domain.TablesVO;
+
+public interface TableDAO {
+
+	int insert(TablesVO tvo);
+
+}

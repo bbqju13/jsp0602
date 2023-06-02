@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/resource/table/modify.css">
+<title>글수정</title>
+</head>
+<body>
+<div class="container">
+	<form action="/tcl/edit" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="tno" value="${tvo.tno }">
+		
+		<div class="form-group">
+		<label for="title"> 제목 </label> : <input type="text" name="title" value="${tvo.title }"> <br> <br>
+		</div>
+		
+		<div class="form-group">
+		<label for="writer">작성자 :</label> <input type="text" name="writer" value="${tvo.writer }">
+		</div>
+		<div class="form-group">
+		<label for="content">내용 :</label>
+		<textarea rows="5" cols="30" name="content">${tvo.content }</textarea>
+		</div>
+		<div class="form-group">
+		<label>등록일 :</label>
+		 ${tvo.reg_date }
+		</div>
+		<div class="form-group">
+		<label>이미지 파일 :</label>
+		 <img alt="XXX" src="/_upload/th_${tvo.img_file }"> <br>
+		</div>
+		<div class="form-group">
+		<input type="hidden" name="img_file" value="${tvo.img_file }">
+		<input type="file" name="new_file"> <br> <br>
+		</div>
+		<div class="button-wrapper">
+		<button type="submit">완료</button>
+		</div>
+	</form>
+	<div class="link-wrapper">
+	<a href="/tcl/remove?tno=${tvo.tno }">
+		<button type="button">삭제</button>
+	</a>
+	</div>
+</div>
+</body>
+</html>

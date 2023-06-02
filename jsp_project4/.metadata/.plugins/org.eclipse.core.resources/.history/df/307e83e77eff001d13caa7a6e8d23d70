@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="tableMapper">
+  <!-- title writer content img_file -->
+  	<insert id="insert" parameterType="tvo">
+  		insert into tables(title, writer, content, img_file)
+  		values(#{title}, #{writer}, #{content}, #{img_file})
+  	</insert>
+  	<select id="list" parameterType="int" resultType="tvo">
+  		select * from tables order by tno desc
+  	</select>
+  	<select id="detail" parameterType="int" resultType="tvo">
+  		select * from tables where tno = #{tno}
+  	</select>
+  	<update id="update" parameterType="tvo">
+  		update tables set title = #{title}, content = #{content}, img_file = #{img_file}
+  		where tno = #{tno}
+  	</update>
+  	<delete id="delete" parameterType="int">
+  		delete from tables where tno = #{tno}
+  	</delete>
+  	<select id="cnt" resultType="int" parameterType="tvo">
+  		select count(tno) from tables where tno > 0
+  		<include refid="search"></include>
+  	</select>
+  	<select id="pageList" parameterType="pgvo" resultType="tvo">
+  		select * from tables order by tno desc limit #{pageStart}, #{qty}
+  	</select>
+  	
+  	<sql id="search">
+  		<if test="type != null">
+  			<trim prefix="and (" suffix=")" prefixOverrides="OR">
+  				<foreach collection="typeToArray" item="type">
+  					<trim prefix="OR">
+  						<choose>
+  							<when test="type == 't'.toString()">
+  								title like concat('%',#{keyword},'%')
+  							</when>
+  							<when test="type == 'w'.toString()">
+  								writer like concat('%',#{keyword},'%')
+  							</when>
+  							<when test="type == 'c'.toString()">
+  								content like concat('%',#{keyword},'%')
+  							</when>
+  						</choose>
+  					</trim>
+  				</foreach>				  			
+  			</trim>
+  		</if>
+  	</sql>
+  	<select id="selectList" parameterType="pgvo" resultType="tvo">
+  		select a.tno, title writer, reg_date, img_file from(
+  		select tno from tables where tno > 0
+  		<include refid="search"></include>
+  		order by tno desc
+  		limit #{pageStart}, #{qty}
+  		) a left join tables b
+  		on a.tno = b.tno
+  	</select>
+  </mapper>

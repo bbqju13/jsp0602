@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link  rel="stylesheet" href="/resource/index/index.css">
+<title>index</title>
+</head>
+<body>
+	<div class="button_container">
+		<p class="description">WELCOME PAGE ~ !</p>
+		<button class="btn">
+			<span>Hover me!</span>
+		</button>
+		<!--<p class="link">
+    Design by 
+    <a href="https://dribbble.com/skytrip" target="_blank">SkyTrip</a>
+  </p>-->
+	</div>
+</body>
+</html>

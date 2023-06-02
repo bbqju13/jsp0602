@@ -1,0 +1,13 @@
+package repository;
+
+import domain.UserVO;
+
+public class UserDAOImpl implements UserDAO {
+
+	@Override
+	public int insert(UserVO uvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

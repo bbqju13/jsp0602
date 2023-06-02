@@ -1,0 +1,9 @@
+package repository;
+
+import domain.CommVO;
+
+public interface CommDAO {
+
+	int insert(CommVO cvo);
+
+}

@@ -1,0 +1,129 @@
+package domain;
+
+public class UserVO {
+	/*	id pw birth age reg_date name
+	 * 
+	 * */
+	
+	private String id;
+	private String pw;
+	private String birth;
+	private int age;
+	private String reg_date;
+	private String last_log;
+	private String name;
+	
+	public UserVO() {}
+
+	// 로그인 id pw
+	public UserVO(String id, String pw) {
+		
+		this.id = id;
+		this.pw = pw;
+	}
+
+	// 회원가입 (join) id pw birth age name
+	public UserVO(String id, String pw, String birth, int age, String name) {
+		
+		this.id = id;
+		this.pw = pw;
+		this.birth = birth;
+		this.age = age;
+		this.name = name;
+	}
+
+	// 회원정보 (list) id pw birth age reg_date name
+	public UserVO(String id, String pw, String birth, int age, String reg_date, String name) {
+		
+		this.id = id;
+		this.pw = pw;
+		this.birth = birth;
+		this.age = age;
+		this.reg_date = reg_date;
+		this.name = name;
+	}
+
+	// 회원정보 수정(modify) pw birth age name
+	public UserVO(String pw, String birth, int age, String name) {
+		
+		this.pw = pw;
+		this.birth = birth;
+		this.age = age;
+		this.name = name;
+	}
+
+	// all
+	public UserVO(String id, String pw, String birth, int age, String reg_date, String last_log, String name) {
+		
+		this.id = id;
+		this.pw = pw;
+		this.birth = birth;
+		this.age = age;
+		this.reg_date = reg_date;
+		this.last_log = last_log;
+		this.name = name;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getPw() {
+		return pw;
+	}
+
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getReg_date() {
+		return reg_date;
+	}
+
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
+	}
+
+	public String getLast_log() {
+		return last_log;
+	}
+
+	public void setLast_log(String last_log) {
+		this.last_log = last_log;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "UserVO [ 아이디 =" + id + ", 비밀번호 =" + pw + ", 생년월일 =" + birth + ", 나이 =" + age + ", 생성일 =" + reg_date
+				+ ", last_log=" + last_log + ", name=" + name + "]";
+	}
+	
+}

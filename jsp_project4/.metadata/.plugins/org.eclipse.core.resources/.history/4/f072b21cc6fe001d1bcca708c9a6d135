@@ -1,0 +1,17 @@
+package service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.CommVO;
+
+public class CommContorllerImpl implements CommService {
+	private static Logger log = LoggerFactory.getLogger(CommContorllerImpl.class);
+		
+	@Override
+	public int post(CommVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

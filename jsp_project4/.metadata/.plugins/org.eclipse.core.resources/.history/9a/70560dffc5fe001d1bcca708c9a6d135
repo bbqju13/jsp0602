@@ -1,0 +1,13 @@
+package service;
+
+import domain.CommVO;
+
+public class CommContorllerImpl implements CommService {
+
+	@Override
+	public int post(CommVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

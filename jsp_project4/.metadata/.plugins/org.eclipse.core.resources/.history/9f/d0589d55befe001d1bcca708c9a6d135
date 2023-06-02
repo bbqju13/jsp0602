@@ -1,0 +1,9 @@
+package service;
+
+import domain.TablesVO;
+
+public interface TableService {
+
+	int insert(TablesVO tvo);
+
+}

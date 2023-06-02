@@ -1,0 +1,25 @@
+package repository;
+
+import org.apache.ibatis.session.SqlSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.UserVO;
+import orm.DatabaseBuilder;
+
+public class UserDAOImpl implements UserDAO {
+	private static Logger log = LoggerFactory.getLogger(UserDAOImpl.class);
+	private SqlSession sql;
+	private String NS = "UserMapper.";
+	
+	public UserDAOImpl() {
+		new DatabaseBuilder();
+		sql = DatabaseBuilder.getFactory().openSession();
+	}
+	@Override
+	public int insert(UserVO uvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
