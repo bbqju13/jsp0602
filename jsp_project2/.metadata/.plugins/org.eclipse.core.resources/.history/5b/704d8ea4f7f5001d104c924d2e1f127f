@@ -1,0 +1,18 @@
+package service;
+
+import domain.CommentVO;
+import repository.CommentDAO;
+
+public class CommentContorllerImpl implements CommentService {
+	private CommentDAO cdao;
+	
+	public CommentServiceImpl() {
+		cdao = new CommentServieImpl();
+	}
+	@Override
+	public int post(CommentVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

@@ -1,0 +1,18 @@
+
+5월 12, 2023 14:22:11.225 NEW SESSION
+5월 12, 2023 14:22:11.225 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 23, 2023 15:21:31.585 NEW SESSION
+5월 23, 2023 15:21:31.585 [5392:8664:0523/152131.584:ERROR:sharing_service.cc(252)] Device un-registration failed with fatal error
+5월 23, 2023 15:21:32.500 [5392:8664:0523/152132.500:ERROR:device_event_log_impl.cc(222)] [15:21:32.499] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+5월 23, 2023 15:21:45.706 [5392:8664:0523/152145.706:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2023 15:41:43.691 [5392:8664:0523/154143.691:ERROR:sharing_service.cc(252)] Device un-registration failed with fatal error
+5월 23, 2023 15:41:44.572 [5392:8664:0523/154144.572:ERROR:device_event_log_impl.cc(222)] [15:41:44.572] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+5월 23, 2023 16:02:57.907 [5392:8664:0523/160257.907:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2023 16:03:01.917 [5392:8664:0523/160301.916:ERROR:device_event_log_impl.cc(222)] [16:03:01.917] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+5월 23, 2023 16:08:06.736 [5392:8664:0523/160806.735:ERROR:sharing_service.cc(252)] Device un-registration failed with fatal error
+5월 23, 2023 16:08:07.557 [5392:8664:0523/160807.557:ERROR:device_event_log_impl.cc(222)] [16:08:07.558] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+5월 23, 2023 17:24:49.530 [10736:10408:0523/172449.530:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost
+5월 23, 2023 17:24:54.20 [10736:10408:0523/172454.020:ERROR:device_event_log_impl.cc(222)] [17:24:54.021] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+5월 23, 2023 17:25:26.497 [10736:10408:0523/172526.497:ERROR:sharing_service.cc(252)] Device un-registration failed with fatal error
+5월 23, 2023 17:25:43.731 [10736:10408:0523/172543.731:ERROR:interface_endpoint_client.cc(696)] Message 0 rejected by interface blink.mojom.WidgetHost

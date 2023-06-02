@@ -1,0 +1,13 @@
+package repository;
+
+import java.util.ArrayList;
+
+import domain.CommentVO;
+
+public interface CommentDAO {
+
+	int insert(CommentVO cvo);
+
+	ArrayList<CommentVO> getList(int bno);
+
+}

@@ -1,0 +1,17 @@
+package repository;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.CommentVO;
+
+public class CommentDAOImpl implements CommentDAO {
+	private static Logger log = LoggerFactory.getLogger(CommentDAOImpl.class);
+
+	@Override
+	public int update(CommentVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

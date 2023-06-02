@@ -1,0 +1,84 @@
+package repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import domain.BoardVO;
+import domain.PagingVO;
+import orm.DatabaseBuilder;
+
+
+public class BoardDAOImpl implements BoardDAO {
+	
+	private static Logger log = LoggerFactory.getLogger(BoardDAOImpl.class);
+	private SqlSession sql;
+	private String NS = "BoardMapper.";
+	
+	public BoardDAOImpl() {
+		new DatabaseBuilder();
+		sql = DatabaseBuilder.getFactory().openSession();
+	}
+	
+	@Override
+	public ArrayList<BoardVO> selectList() {
+		// TODO Auto-generated method stub
+		log.info(" >> list DAO 진입 : ");
+		return new ArrayList<BoardVO>(sql.selectList(NS + "list"));
+	}
+
+	@Override
+	public int insert(BoardVO bvo) {
+		// TODO Auto-generated method stub
+		log.info(" >> insert DAO 진입 : ");
+		int isOk = sql.insert(NS + "insert", bvo);
+		sql.commit();
+		return isOk;
+	}
+
+	@Override
+	public BoardVO selectOne(int bno) {
+		// TODO Auto-generated method stub
+		log.info(" >> selectOne DAO 진입 : ");
+		BoardVO bvo = sql.selectOne(NS + "detail", bno);
+		sql.commit();
+		return bvo;
+	}
+
+	@Override
+	public int update(BoardVO mbvo) {
+		// TODO Auto-generated method stub
+		log.info(" >> update DAO 진입 : ");
+		int isOk = sql.update(NS + "update", mbvo);
+		sql.commit();
+		return isOk;
+	}
+
+	@Override
+	public int delete(int rbno) {
+		// TODO Auto-generated method stub
+		log.info(" >> delete DAO 진입 : ");
+		int isOk = sql.delete(NS + "delete", rbno);
+		
+		if(isOk > 0) {
+			sql.commit();
+		}
+		return isOk;
+	}
+
+	@Override
+	public int totCnt() {
+		// TODO Auto-generated method stub
+		return sql.selectOne(NS + "cnt");
+	}
+
+	@Override
+	public List<BoardVO> pageList(PagingVO pgvo) {
+		// TODO Auto-generated method stub
+		return sql.selectList(NS+ "pageList", pgvo);
+	}
+
+}

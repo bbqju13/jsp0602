@@ -1,0 +1,13 @@
+package service;
+
+import domain.CommentVO;
+
+public class CommentContorllerImpl implements CommentService {
+
+	@Override
+	public int post(CommentVO cvo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

@@ -1,0 +1,19 @@
+package repository;
+
+import java.util.ArrayList;
+
+import domain.BoardVO;
+
+public interface BoardDAO {
+
+	ArrayList<BoardVO> selectList();
+
+	int insert(BoardVO bvo);
+
+	BoardVO selectOne(int bno);
+
+	int update(BoardVO mbvo);
+
+	int delete(int rbno);
+
+}
